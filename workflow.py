@@ -36,9 +36,9 @@ def workflow(in_images, out_path,
 
         #/home/xxx/bin/Vaa3D_CentOS_64bit_v3.458/start_vaa3d.sh -x "home/xxx/bin/Vaa3D_CentOS_64bit_v3.458/plugins/neuron_tracing/MOST_tracing/libmostVesselTracer.so" -f MOST_trace -i "/home/xxx/Documents/TREES_Image3.ome.tif" -p 1,20,20,20
         command = "/usr/bin/xvfb-run Vaa3D_CentOS_64bit_v3.458/vaa3d -x /Vaa3D_CentOS_64bit_v3.458/plugins/neuron_tracing/MOST_tracing/libmostVesselTracer.so -f MOST_trace -i {} -o {}.swc " \
-                  "-p \"\" 1 {} {} {}".format(out_file_path, out_file_path[:-4],
+                  "-p 1 {} {} {}".format(out_file_path, out_file_path[:-4],
                     threshold, seed, slip)
-
+        print(command)
 
         return_code = call(command, shell=True, cwd="/") # waits for the subprocess to return
         #Move the result file to the output name
