@@ -1,0 +1,95 @@
+{
+    "name": "W_Neuron3dTree_vaa3d_most",
+    "container-image": {
+        "image": "neubiaswg5/w_neuron3dtree_vaa3d_most",
+        "type": "singularity"
+    },
+    "schema-version": "cytomine-0.1",
+    "description": "trace 3d tree with vaa3d MOST Vessel Tracer algorithm",
+    "command-line": "python wrapper.py CYTOMINE_HOST CYTOMINE_PUBLIC_KEY CYTOMINE_PRIVATE_KEY CYTOMINE_ID_PROJECT CYTOMINE_ID_SOFTWARE THRESHOLD SEED SLIP",
+    "inputs": [
+        {
+            "id": "cytomine_host",
+            "value-key": "@ID",
+            "command-line-flag": "--@id",
+            "name": "Cytomine host",
+            "description": "Cytomine server hostname",
+            "type": "String",
+            "optional": false,
+            "set-by-server": true
+        },
+        {
+            "id": "cytomine_public_key",
+            "value-key": "@ID",
+            "command-line-flag": "--@id",
+            "name": "Cytomine public key",
+            "description": "Cytomine public key",
+            "type": "String",
+            "optional": false,
+            "set-by-server": true
+        },
+        {
+            "id": "cytomine_private_key",
+            "value-key": "@ID",
+            "command-line-flag": "--@id",
+            "name": "Cytomine private key",
+            "description": "Cytomine private key",      
+            "type": "String",
+            "optional": false,
+            "set-by-server": true
+        },
+        {
+            "id": "cytomine_id_project",
+            "value-key": "@ID",
+            "command-line-flag": "--@id",
+            "name": "Cytomine project id",
+            "description": "Cytomine project id",
+            "type": "String",
+            "optional": false,
+            "set-by-server": true
+        },
+        {
+            "id": "cytomine_id_software",
+            "value-key": "@ID",
+            "command-line-flag": "--@id",
+            "name": "Cytomine software id",
+            "description": "Cytomine software id",
+            "type": "String",
+            "optional": false,
+            "set-by-server": true
+        },
+        {
+          "default-value": 20,
+          "name": "threshold",
+          "description": "the threshold value, default 20",
+          "set-by-server": false,
+          "value-key": "@ID",
+          "optional": true,
+          "id": "threshold",
+          "type": "Number",
+          "command-line-flag": "--@id"
+        },
+        {
+          "default-value": 20,
+          "name": "seed",
+          "description": "window size of the seed, default 20",
+          "set-by-server": false,
+          "value-key": "@ID",
+          "optional": true,
+          "id": "seed",
+          "type": "Number",
+          "command-line-flag": "--@id"
+        },
+        {
+          "default-value": 20,
+          "name": "slip",
+          "description": "window size to slip from seed, default 20",
+          "set-by-server": false,
+          "value-key": "@ID",
+          "optional": true,
+          "id": "slip",
+          "type": "Number",
+          "command-line-flag": "--@id"
+        }
+    ]
+}
