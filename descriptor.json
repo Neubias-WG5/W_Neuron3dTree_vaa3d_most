@@ -1,5 +1,5 @@
 {
-    "name": "W_Neuron3dTree_vaa3d_most",
+    "name": "Neuron3dTree_vaa3d_most",
     "container-image": {
         "image": "neubiaswg5/w_neuron3dtree_vaa3d_most",
         "type": "singularity"
